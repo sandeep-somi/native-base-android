@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { Container, Content, Button, Card, CardItem, Body } from 'native-base';
+import { Container, Content, Button, Card, CardItem, Body, Header, Footer } from 'native-base';
 import { CustomCard } from '../components';
+import { homeData } from '../constants';
 
 export default class Main extends Component {
 
   render() {
 
     return (
-      <CustomCard key={1}/>
+      <Content>
+        <Header/>
+        {homeData && homeData.map(item => <CustomCard key={item.id} data={item}/>)}
+      </Content>
       )
   }
 }

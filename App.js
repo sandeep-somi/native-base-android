@@ -2,6 +2,7 @@ import React from 'react';
 import { Main } from './src/containers';
 import { Container } from 'native-base';
 import { View, Text, StyleSheet } from 'react-native';
+import { Constants } from 'expo';
 
 export default class App extends React.Component {
   render() {
@@ -16,7 +17,7 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 24,
+    marginTop: Constants.statusBarHeight,
     flex: 1,
     // backgroundColor: 'orange'
   }

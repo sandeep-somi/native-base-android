@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "swipe-test",
-    "description": "This project is really great.",
+    "description": "This project is really great. san projuct native-base with android",
     "slug": "swipe-test",
     "privacy": "public",
     "sdkVersion": "30.0.0",
@@ -10,7 +10,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splash.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

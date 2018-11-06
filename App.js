@@ -1,7 +1,7 @@
 import React from 'react';
 import { Main } from './src/containers';
-import { Container } from 'native-base';
-import { View, Text, StyleSheet } from 'react-native';
+import { Container, Header, Body } from 'native-base';
+import { View, Text, StyleSheet, StatusBar } from 'react-native';
 import { Constants } from 'expo';
 import AppRoutes from './src/routes';
 

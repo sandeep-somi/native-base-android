@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, BackHandler } from 'react-native';
-import { Container, Content, Button, Card, CardItem, Body, Header, Footer, Left, Right, Icon } from 'native-base';
+import { View, Text, StyleSheet, BackHandler, StatusBar } from 'react-native';
+import { Container, Content, Button, Card, CardItem, Body, Header, Footer, Left, Right, Icon, Title } from 'native-base';
 import { CustomCard } from '../components';
 import { homeData } from '../constants';
 
@@ -26,18 +26,20 @@ export default class Main extends Component {
   render() {
 
     return (
-      <Content>
-        <Header>
+      <React.Fragment>
+        <Header style={styles.header} androidStatusBarColor="red">
           <Left>
             <Text>Native Base Practice</Text>
           </Left>
           <Right>
-            <Text onPress={() => this.props.history.push('/')}><Icon type="FontAwesome" name="power-off" style={{ color: '#fff'}}/></Text>
+            <Text onPress={() => this.props.history.push('/')}><Icon type="FontAwesome" name="power-off" style={{ color: 'grey', fontWeight: '100' }}/></Text>
           </Right>
         </Header>
-        {homeData && homeData.map(item => <CustomCard key={item.id} data={item}/>)}
-      </Content>
-      )
+        <Content>
+          {homeData && homeData.map(item => <CustomCard key={item.id} data={item}/>)}
+        </Content>
+      </React.Fragment>
+    )
   }
 }
 
@@ -48,5 +50,10 @@ export default class Main extends Component {
 const styles = StyleSheet.create({
   main: {
     
+  },
+  header: {
+    backgroundColor: '#fff',
+    shadowColor: 'black',
+    borderBottomWidth: 1
   }
 });
